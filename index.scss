@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.slider-container {
+    display: flex;
+    &__circle {
+        width: 80px;
+        height: 80px;
+        background-image: url(./checkmark-circle-outline.svg);
+        background-repeat: no-repeat;
+        background-size: 80px;
+        text-align: center;
+        position: relative;
+        margin: -8px;
+        transition-duration: 1s;
+    }
+    &__step {
+        color: #fff;
+        position: absolute;
+        display: none;
+        bottom: -27.5px;
+        left: 20px;
+        font-size: 20px;
+        transition-duration: 1s;
+    }
+    &__line {
+        border-bottom: 5px solid gray;
+        width: 100px;
+        position: relative;
+        bottom: 50%;
+        transition-duration: 1s;
+    }
+}
+
+.btn-container {
+    display: flex;
+    column-gap: 50px;
+    &__arrow {
+        transition-duration: 0.5s;
+        background-color: purple;
+        border-radius: 10px;
+        border:none;
+        padding: 0 15px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    // &__arrow:nth-child(1) {
+    //     background-color: gray;
+    // }
+    &__arrow:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
+    &__previous {
+        width: 40px;
+        padding: 4px;
+    }
+    &__next {
+        width: 40px;
+        padding: 4px;
+    }
+}
+
+.circle-update-greenColor {
+    background-image: url(./checkmark-circle-outline-update.svg);
+}
+
+.circle-update-grayColor {
+    background-image: url(./checkmark-circle-outline.svg);
+}
+
+.line-update-greenColor {
+    border-bottom: 5px solid green;
+}
+
+.line-update-grayColor {
+    border-bottom: 5px solid gray;
+}
+
+.text-update-greenColor {
+    color: green;
+    display: block;
+}
+
+.text-update-grayColor {
+    color: #fff;
+}
+
+.btn-disable-color {
+    background-color: gray;
+}
+
+.btn-enable-color {
+    background-color: purple;
+}
+
+
